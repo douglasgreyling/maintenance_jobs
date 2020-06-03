@@ -1,8 +1,13 @@
 namespace :maintenance_jobs do
   desc "Installs maintenance jobs"
-  task install: :environment do
-    `rails generate migration CreateMaintenanceRuns version:string`
+  task :install do
+    `rails generate model MaintenanceRun version:string`
     sleep 1
-    'rake db:migrate'
+    Rake::Task['db:migrate'].invoke
+  end
+
+  desc "Runs pending maintenance jobs"
+  task :run do
+    MaintenanceJob.run_pending_jobs
   end
 end

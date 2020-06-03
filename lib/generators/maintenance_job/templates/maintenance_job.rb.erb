@@ -1,0 +1,8 @@
+class <%= class_name %>Job < MaintenanceJob
+  def self.perform
+  end
+
+  def self.version
+    <%= Time.now.strftime("%Y%m%d%H%M%S").inspect %>
+  end
+end

@@ -24,4 +24,6 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
+Rake.add_rakelib 'lib/tasks'
+
 task default: :test

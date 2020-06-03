@@ -62,6 +62,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    aspector (0.14.0)
     builder (3.2.4)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
@@ -136,8 +137,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aspector
   maintenance_jobs!
   sqlite3
 
 BUNDLED WITH
-   2.0.2
+   1.17.3
